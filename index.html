@@ -46,7 +46,6 @@
       overflow-x: hidden;
     }
 
-    /* Floating Particles Background */
     #particle-canvas {
       position: fixed;
       top: 0;
@@ -57,7 +56,6 @@
       z-index: 1;
     }
 
-    /* Cover / Landing Overlay */
     #overlay {
       position: fixed;
       inset: 0;
@@ -132,14 +130,6 @@
       transform: scale(0.96);
     }
 
-    @media (hover: hover) {
-      .btn-primary:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 30px rgba(230, 57, 70, 0.5);
-      }
-    }
-
-    /* Main Container Structure */
     .app-container {
       position: relative;
       z-index: 2;
@@ -162,7 +152,6 @@
       }
     }
 
-    /* Glass Cards Base Style */
     .glass-card {
       background: var(--card-bg);
       backdrop-filter: blur(16px);
@@ -171,10 +160,8 @@
       border-radius: var(--radius);
       padding: 28px;
       box-shadow: var(--glass-shadow);
-      transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
-    /* Header Section */
     .header-section {
       text-align: center;
       margin-bottom: 10px;
@@ -208,12 +195,6 @@
       margin-top: 4px;
     }
 
-    /* Music Player Card */
-    .player-card {
-      position: relative;
-      overflow: hidden;
-    }
-
     .player-header {
       display: flex;
       align-items: center;
@@ -231,7 +212,6 @@
       justify-content: center;
       font-size: 1.5rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      position: relative;
       flex-shrink: 0;
     }
 
@@ -255,7 +235,6 @@
       margin-top: 2px;
     }
 
-    /* Visualizer Animation */
     .visualizer {
       display: flex;
       align-items: flex-end;
@@ -270,7 +249,6 @@
       background: #f4a261;
       border-radius: 2px;
       height: 6px;
-      transition: height 0.2s ease;
     }
 
     .playing .bar {
@@ -288,7 +266,6 @@
       100% { height: 24px; }
     }
 
-    /* Progress & Controls */
     .progress-container {
       margin-bottom: 16px;
     }
@@ -298,7 +275,6 @@
       height: 6px;
       border-radius: 10px;
       cursor: pointer;
-      overflow: hidden;
       position: relative;
     }
 
@@ -307,7 +283,6 @@
       height: 100%;
       width: 0%;
       border-radius: 10px;
-      transition: width 0.1s linear;
     }
 
     .time-stamps {
@@ -337,12 +312,6 @@
       justify-content: center;
       font-size: 1.2rem;
       cursor: pointer;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-      transition: all 0.2s;
-    }
-
-    .btn-circle:active {
-      transform: scale(0.92);
     }
 
     .upload-box {
@@ -355,15 +324,8 @@
       color: var(--text-sub);
       cursor: pointer;
       text-decoration: underline;
-      display: inline-block;
-      padding: 4px 8px;
     }
 
-    .custom-file-upload:hover {
-      color: #fff;
-    }
-
-    /* Photo Album Grid */
     .section-subtitle {
       font-size: 1.1rem;
       font-weight: 600;
@@ -386,19 +348,6 @@
       border-radius: 16px;
       padding: 8px;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative;
-    }
-
-    .photo-card:active {
-      transform: scale(0.95);
-    }
-
-    @media (hover: hover) {
-      .photo-card:hover {
-        transform: translateY(-5px) scale(1.02);
-        border-color: rgba(255, 255, 255, 0.3);
-      }
     }
 
     .photo-card img {
@@ -406,7 +355,6 @@
       aspect-ratio: 1/1;
       object-fit: cover;
       border-radius: 10px;
-      display: block;
     }
 
     .photo-caption {
@@ -417,11 +365,6 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-
-    /* Letter Section */
-    .letter-card {
-      position: relative;
     }
 
     .letter-content {
@@ -438,11 +381,6 @@
       margin-bottom: 12px;
     }
 
-    .letter-content p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Interactive Buttons */
     .actions-group {
       display: flex;
       flex-direction: column;
@@ -470,15 +408,8 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      transition: all 0.2s ease;
     }
 
-    .btn-secondary:active {
-      transform: scale(0.97);
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-    /* Modal Lightbox for Photos & Surprises */
     .modal {
       position: fixed;
       inset: 0;
@@ -509,12 +440,6 @@
       width: 100%;
       text-align: center;
       position: relative;
-      transform: scale(0.9);
-      transition: transform 0.3s ease;
-    }
-
-    .modal.active .modal-content {
-      transform: scale(1);
     }
 
     .modal-img {
@@ -544,12 +469,8 @@
       border-radius: 50%;
       font-size: 1.2rem;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
-    /* Footer */
     .footer {
       text-align: center;
       margin-top: 30px;
@@ -561,32 +482,26 @@
 </head>
 <body>
 
-  <!-- Floating Particles Canvas -->
   <canvas id="particle-canvas"></canvas>
 
-  <!-- Cover / Landing Page Overlay -->
   <div id="overlay">
     <div class="cover-card">
       <div class="cover-icon">✨</div>
       <h1 class="cover-title">Sebuah Ucapan Kecil</h1>
       <p class="cover-sub">Ada sedikit kenangan & doa spesial yang ingin kubagikan di hari ulang tahun piyuu yang ke 20 ini.</p>
-      <button class="btn-primary" onclick="initExperience()">
+      <button class="btn-primary" id="startBtn">
         <span>Di Buka yaa Piyuu</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </button>
     </div>
   </div>
 
-  <!-- Audio Element kompatibel HP & iOS -->
-  <audio id="bgMusic" loop playsinline preload="auto">
+  <!-- Element Audio Khusus iOS Compatibility -->
+  <audio id="bgMusic" playsinline preload="auto">
     <source src="lagu.mp3" type="audio/mpeg">
-    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Main App Layout -->
   <div class="app-container">
-    
-    <!-- Header -->
     <header class="header-section">
       <span class="badge">A Special Day</span>
       <h1 class="main-title">Selamat Ulang Tahun Piyuuu🎉
@@ -595,11 +510,7 @@
     </header>
 
     <div class="main-grid">
-      
-      <!-- Left Column: Music & Photos -->
       <div class="left-col" style="display: flex; flex-direction: column; gap: 20px;">
-        
-        <!-- Music Player Card -->
         <div class="glass-card player-card">
           <div class="player-header">
             <div class="disc-icon" id="discIcon">🎵</div>
@@ -609,7 +520,6 @@
             </div>
           </div>
 
-          <!-- Animated Audio Visualizer -->
           <div class="visualizer" id="visualizer">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -618,7 +528,6 @@
             <div class="bar"></div>
           </div>
 
-          <!-- Progress Bar -->
           <div class="progress-container">
             <div class="progress-bar-bg" id="progressBg" onclick="seekAudio(event)">
               <div class="progress-fill" id="progressFill"></div>
@@ -629,12 +538,10 @@
             </div>
           </div>
 
-          <!-- Controls -->
           <div class="controls-row">
-            <button class="btn-circle" id="playBtn" onclick="togglePlayPause()" aria-label="Play/Pause">▶️</button>
+            <button class="btn-circle" id="playBtn" aria-label="Play/Pause">▶️</button>
           </div>
 
-          <!-- Optional Custom Music Upload -->
           <div class="upload-box">
             <label for="audioUpload" class="custom-file-upload">
               📁 Putar Lagu Lain dari Perangkat
@@ -643,11 +550,8 @@
           </div>
         </div>
 
-        <!-- Photo Album Card -->
         <div class="glass-card">
-          <div class="section-subtitle">
-            <span>📸</span> Momen Spesial
-          </div>
+          <div class="section-subtitle"><span>📸</span> Momen Spesial</div>
           <div class="photo-grid">
             <div class="photo-card" onclick="openLightbox('foto1.jpg', 'Kenangan Indah ✨')">
               <img src="foto1.jpg" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=400&q=80'" alt="Momen 1">
@@ -663,17 +567,11 @@
             </div>
           </div>
         </div>
-
       </div>
 
-      <!-- Right Column: Letter & Surprises -->
       <div class="right-col" style="display: flex; flex-direction: column; gap: 20px;">
-        
-        <!-- Letter Card -->
         <div class="glass-card letter-card">
-          <div class="section-subtitle">
-            <span>💌</span> Pesan & Apresiasi
-          </div>
+          <div class="section-subtitle"><span>💌</span> Pesan & Apresiasi</div>
           <div class="letter-content">
             <p><strong>Selamat Ulang Tahun yaa piyuuu!</strong></p>
             <p>Di hari piyuu yang spesial ini, ugus cuma mau ngucapinn selamat bertambah usia yaa. Semoga di usia piyuu yang baru ini, piyuu selalu diberikan kesehatan, kelancaran, dan kebahagiaan dalam setiap langkah yang piyuu pilih.</p>
@@ -681,7 +579,6 @@
             <p>Tetaplah jadi diri piyuu yang luar biasa yaa, walaupun ugus sam piyu sekarang uda ga ada status lagi tapi ugus harap piyu jangan lupain uguss ya. Semoga semua impian dan cita cita piyuu bisa tercapai satu per satu aamiin. <em>Wish you all the best!</em> ✨</p>
           </div>
 
-          <!-- Interactive Surprise Action Buttons -->
           <div class="actions-group">
             <button class="btn-secondary" onclick="triggerDoaSurprise()">
               <span>✨ Kirim Doa & Harapan</span>
@@ -691,19 +588,14 @@
             </button>
           </div>
         </div>
-
       </div>
-
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
       Dibuat khusus untuk merayakan hari ulang Piyuu.
     </footer>
-
   </div>
 
-  <!-- Lightbox / Popup Modal -->
   <div class="modal" id="modal" onclick="closeModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
       <button class="btn-close" onclick="closeModal()">✕</button>
@@ -714,8 +606,8 @@
   </div>
 
   <script>
-    // Audio Player Elements
     const audio = document.getElementById('bgMusic');
+    const startBtn = document.getElementById('startBtn');
     const playBtn = document.getElementById('playBtn');
     const discIcon = document.getElementById('discIcon');
     const visualizer = document.getElementById('visualizer');
@@ -723,52 +615,47 @@
     const currentTimeEl = document.getElementById('currentTime');
     const durationTimeEl = document.getElementById('durationTime');
 
-    // Experience Initialization (Start Music & Confetti)
-    function initExperience() {
+    // Event Listener langsung pada sentuhan pertama di iOS
+    startBtn.addEventListener('click', function() {
       const overlay = document.getElementById('overlay');
       overlay.style.opacity = '0';
       overlay.style.pointerEvents = 'none';
-      setTimeout(() => {
-        overlay.style.display = 'none';
-      }, 800);
+      setTimeout(() => { overlay.style.display = 'none'; }, 800);
 
-      // Play Audio
+      // Paksa iOS untuk memuat dan memutar audio
+      audio.load();
       playAudio();
-
-      // Launch Initial Confetti
       launchConfetti();
-    }
+    });
 
-    // Toggle Play/Pause
-    function togglePlayPause() {
+    playBtn.addEventListener('click', function() {
       if (audio.paused) {
         playAudio();
       } else {
         pauseAudio();
       }
-    }
+    });
 
     function playAudio() {
-      const promise = audio.play();
-      if (promise !== undefined) {
-        promise.then(() => {
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
           playBtn.innerText = '⏸️';
           discIcon.classList.add('playing');
           visualizer.classList.add('playing');
         }).catch(err => {
-          console.log("Autoplay diproteksi browser:", err);
+          console.log("iOS Playback Intercepted:", err);
         });
       }
     }
 
     function pauseAudio() {
       audio.pause();
-      playBtn.innerText = '▶️';
+      playBtn.innerText = '▶️️';
       discIcon.classList.remove('playing');
       visualizer.classList.remove('playing');
     }
 
-    // Audio Time Progress Updating
     audio.addEventListener('timeupdate', () => {
       if (audio.duration) {
         const percent = (audio.currentTime / audio.duration) * 100;
@@ -776,10 +663,6 @@
         currentTimeEl.innerText = formatTime(audio.currentTime);
         durationTimeEl.innerText = formatTime(audio.duration);
       }
-    });
-
-    audio.addEventListener('loadedmetadata', () => {
-      durationTimeEl.innerText = formatTime(audio.duration);
     });
 
     function seekAudio(e) {
@@ -797,7 +680,6 @@
       return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
     }
 
-    // Custom File Audio Upload
     function handleAudioUpload(event) {
       const file = event.target.files[0];
       if (file) {
@@ -805,29 +687,26 @@
         audio.src = fileURL;
         document.getElementById('songTitle').innerText = file.name.replace(/\.[^/.]+$/, "");
         document.getElementById('songArtist').innerText = "File Lokal Perangkat";
+        audio.load();
         playAudio();
       }
     }
 
-    // Photo Lightbox
     function openLightbox(imgSrc, caption) {
       const modal = document.getElementById('modal');
       const modalImg = document.getElementById('modalImg');
       const modalText = document.getElementById('modalText');
-
       modalImg.style.display = 'block';
       modalImg.src = imgSrc;
       modalText.innerText = caption;
       modal.classList.add('active');
     }
 
-    // Interactive Surprise Handlers
     function triggerDoaSurprise() {
       launchConfetti();
       const modal = document.getElementById('modal');
       const modalImg = document.getElementById('modalImg');
       const modalText = document.getElementById('modalText');
-
       modalImg.style.display = 'none';
       modalText.innerHTML = "✨ <strong>Doa & Harapan Tulus:</strong><br><br>Semoga di usia piyuu saat ini, piyuu selalu dikelilingi oleh hal hal baik, orang orang yang sayang pada piyuu, serta kemudahan dalam setiap urusan maupun kehidupan piyuu.";
       modal.classList.add('active');
@@ -838,18 +717,15 @@
       const modal = document.getElementById('modal');
       const modalImg = document.getElementById('modalImg');
       const modalText = document.getElementById('modalText');
-
       modalImg.style.display = 'none';
       modalText.innerHTML = "🕊️ <strong>Pesan Kenangan:</strong><br><br>Meski cerita kita memang sudah Selesai tapi, kenangan manis yang pernah ada akan selalu punya tempat yang baik. Semoga piyu bahagia selalu ya! dan maaf ya untuk selama ini kalau ugus masih belum ngasih yang terbaik buat piyuu I still love you, but nothing more than that.";
       modal.classList.add('active');
     }
 
     function closeModal() {
-      const modal = document.getElementById('modal');
-      modal.classList.remove('active');
+      document.getElementById('modal').classList.remove('active');
     }
 
-    // Confetti Effect
     function launchConfetti() {
       if (typeof confetti === 'function') {
         confetti({
@@ -861,7 +737,6 @@
       }
     }
 
-    // Background Particles Canvas
     const canvas = document.getElementById('particle-canvas');
     const ctx = canvas.getContext('2d');
     let particles = [];
@@ -874,9 +749,7 @@
     resizeCanvas();
 
     class Particle {
-      constructor() {
-        this.reset();
-      }
+      constructor() { this.reset(); }
       reset() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -901,16 +774,10 @@
       }
     }
 
-    for (let i = 0; i < 40; i++) {
-      particles.push(new Particle());
-    }
-
+    for (let i = 0; i < 40; i++) { particles.push(new Particle()); }
     function animateParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => {
-        p.update();
-        p.draw();
-      });
+      particles.forEach(p => { p.update(); p.draw(); });
       requestAnimationFrame(animateParticles);
     }
     animateParticles();
