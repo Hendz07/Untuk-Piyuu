@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -577,10 +577,10 @@
     </div>
   </div>
 
-  <!-- Audio Element (Sempurna - Andra and The BackBone) -->
-  <audio id="bgMusic" loop preload="auto">
-    <source src="https://raw.githubusercontent.com/arief-project/music-host/main/Sempurna.mp3" type="audio/mpeg">
+  <!-- Audio Element kompatibel HP & iOS -->
+  <audio id="bgMusic" loop playsinline preload="auto">
     <source src="lagu.mp3" type="audio/mpeg">
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Main App Layout -->
@@ -749,13 +749,16 @@
     }
 
     function playAudio() {
-      audio.play().then(() => {
-        playBtn.innerText = '⏸️';
-        discIcon.classList.add('playing');
-        visualizer.classList.add('playing');
-      }).catch(err => {
-        console.log("Autoplay diproteksi browser:", err);
-      });
+      const promise = audio.play();
+      if (promise !== undefined) {
+        promise.then(() => {
+          playBtn.innerText = '⏸️';
+          discIcon.classList.add('playing');
+          visualizer.classList.add('playing');
+        }).catch(err => {
+          console.log("Autoplay diproteksi browser:", err);
+        });
+      }
     }
 
     function pauseAudio() {
